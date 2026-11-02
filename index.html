@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Larissa Giongo — Nutricionista Especialista em GLP-1</title>
+  <meta name="description" content="Acompanhamento nutricional individualizado para mulheres em uso de canetas emagrecedoras (GLP-1). Emagreça preservando massa muscular, sem enjoos e sem efeito rebote.">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Larissa Giongo — Acompanhamento Individual GLP-1">
+  <meta property="og:description" content="Potencialize o resultado da canetinha sem perder massa muscular, sem sofrer com efeitos colaterais e sem efeito rebote.">
+  <meta property="og:image" content="larissa.png">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#FF4375">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Script de UTMs Utmify -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1358558266130932');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1358558266130932&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <style>
+    :root {
+      /* Paleta Oficial */
+      --pink-main: #FF4375;      /* Rosa principal */
+      --pink-deep: #D93667;      /* Rosa profundo */
+      --orange-main: #FF7E01;    /* Laranja */
+      --yellow-warm: #F5A400;    /* Amarelo */
+      --cream-main: #FFF7F2;     /* Creme principal */
+      --cream-light: #FFFAF7;    /* Creme claro */
+      --white: #FFFFFF;          /* Branco */
+      --text-dark: #221815;      /* Texto escuro */
+
+      /* Derivados de Apoio (baseados na paleta) */
+      --text-muted: rgba(34, 24, 21, 0.88);
+      --text-soft: rgba(34, 24, 21, 0.68);
+      --border-pink: rgba(255, 67, 117, 0.22);
+      --border-soft: rgba(34, 24, 21, 0.08);
+
+      /* Gradientes */
+      --gradient-brand: linear-gradient(90deg, var(--pink-main) 0%, var(--orange-main) 100%);
+      --gradient-cta: linear-gradient(135deg, var(--pink-main) 0%, var(--orange-main) 100%);
+      --gradient-cta-hover: linear-gradient(135deg, var(--pink-deep) 0%, var(--pink-main) 50%, var(--orange-main) 100%);
+      --gradient-warm-badge: linear-gradient(135deg, rgba(255, 67, 117, 0.12) 0%, rgba(245, 164, 0, 0.14) 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background-color: var(--cream-main);
+      color: var(--text-dark);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Luzes de fundo suaves na paleta */
+    .ambient-glow {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(110px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glow-pink {
+      width: 420px;
+      height: 420px;
+      background: rgba(255, 67, 117, 0.14);
+      top: -120px;
+      left: -100px;
+    }
+
+    .glow-orange {
+      width: 380px;
+      height: 380px;
+      background: rgba(245, 164, 0, 0.13);
+      bottom: -100px;
+      right: -80px;
+    }
+
+
+
+    /* Wrapper Central (Uma Única Dobra) */
+    .single-fold-stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 14px 18px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    /* Card Principal */
+    .bio-card {
+      width: 100%;
+      max-width: 520px;
+      background: var(--white);
+      border: 1px solid var(--border-pink);
+      border-radius: 24px;
+      box-shadow:
+        0 20px 50px rgba(34, 24, 21, 0.08),
+        0 4px 16px rgba(255, 67, 117, 0.08);
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      animation: cardEnter 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .bio-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--gradient-brand);
+    }
+
+    @keyframes cardEnter {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Coluna de Perfil / Autoridade */
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--cream-light);
+      border: 1px solid rgba(255, 67, 117, 0.16);
+      border-radius: 18px;
+      padding: 12px 14px;
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      padding: 3px;
+      background: var(--gradient-cta);
+      box-shadow: 0 6px 18px rgba(255, 67, 117, 0.28);
+      flex-shrink: 0;
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 18%;
+      border: 2.5px solid var(--white);
+      display: block;
+      background: var(--cream-main);
+    }
+
+    .verified-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--yellow-warm);
+      border: 2.5px solid var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dark);
+      font-size: 12px;
+      font-weight: 800;
+      box-shadow: 0 2px 6px rgba(34, 24, 21, 0.18);
+    }
+
+    .profile-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-width: 0;
+      text-align: left;
+    }
+
+    .profile-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .profile-crn {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--pink-deep);
+      line-height: 1.25;
+    }
+
+    .profile-creds {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    /* Conteúdo Principal e Copy */
+    .content-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meds-pills {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .med-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--cream-main);
+      border: 1px solid rgba(255, 126, 1, 0.25);
+      color: var(--text-dark);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    .med-pill span {
+      color: var(--orange-main);
+      font-weight: 800;
+    }
+
+    .headline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.16;
+      letter-spacing: -0.03em;
+      color: var(--text-dark);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .txt-highlight {
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subheadline {
+      font-size: 14.5px;
+      font-weight: 500;
+      line-height: 1.38;
+      letter-spacing: -0.01em;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .subheadline strong {
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    /* Pilares do Acompanhamento */
+    .pillars-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      background: var(--cream-light);
+      border: 1px solid var(--border-soft);
+      border-left: 3.5px solid var(--pink-main);
+      border-radius: 12px;
+      padding: 10px 12px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .pillar-item:nth-child(2) {
+      border-left-color: var(--orange-main);
+    }
+
+    .pillar-item:nth-child(3) {
+      border-left-color: var(--yellow-warm);
+    }
+
+    .pillar-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 67, 117, 0.12);
+      color: var(--pink-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .pillar-item:nth-child(2) .pillar-icon {
+      background: rgba(255, 126, 1, 0.12);
+      color: var(--orange-main);
+    }
+
+    .pillar-item:nth-child(3) .pillar-icon {
+      background: rgba(245, 164, 0, 0.16);
+      color: var(--text-dark);
+    }
+
+    .pillar-text {
+      font-size: 13.5px;
+      line-height: 1.3;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .pillar-text strong {
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    /* Botão CTA Principal (WhatsApp) */
+    @keyframes ctaPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 67, 117, 0.5), 0 10px 24px -4px rgba(255, 126, 1, 0.45);
+      }
+      50% {
+        box-shadow: 0 0 0 12px rgba(255, 67, 117, 0), 0 14px 30px -2px rgba(255, 126, 1, 0.6);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 67, 117, 0), 0 10px 24px -4px rgba(255, 126, 1, 0.45);
+      }
+    }
+
+    @keyframes shineSweep {
+      0% { left: -120%; }
+      35% { left: 140%; }
+      100% { left: 140%; }
+    }
+
+    .cta-button {
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 62px;
+      padding: 16px 20px;
+      background: var(--gradient-cta);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+      animation: ctaPulse 2.2s infinite;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .cta-button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        transparent 100%
+      );
+      transform: skewX(-25deg);
+      animation: shineSweep 3.2s infinite;
+      pointer-events: none;
+    }
+
+    .cta-button:hover {
+      background: var(--gradient-cta-hover);
+      transform: translateY(-2px) scale(1.01);
+    }
+
+    .cta-button:active {
+      transform: translateY(0) scale(0.99);
+    }
+
+    .wa-icon {
+      width: 26px;
+      height: 26px;
+      fill: var(--white);
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 4px rgba(34, 24, 21, 0.2));
+    }
+
+    .cta-main {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    .cta-arrow {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--white);
+      transition: transform 0.25s ease;
+    }
+
+    .cta-button:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+
+    /* =====================================================
+       🖥️ LAYOUT DESKTOP (2 COLUNAS NA MESMA DOBRA)
+       ===================================================== */
+    @media (min-width: 860px) {
+      .single-fold-stage {
+        padding: 28px 24px;
+      }
+
+      .bio-card {
+        max-width: 960px;
+        padding: 36px 40px;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 36px;
+        align-items: center;
+        border-radius: 28px;
+      }
+
+      /* Coluna Esquerda: Card Vertical da Nutricionista */
+      .profile-section {
+        grid-column: 1;
+        grid-row: 1;
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 22px;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 100%;
+        justify-content: center;
+        background: linear-gradient(180deg, var(--cream-main) 0%, var(--cream-light) 100%);
+        border: 1px solid rgba(255, 67, 117, 0.22);
+        border-radius: 22px;
+        gap: 14px;
+      }
+
+      /* Coluna Direita: Copy, Pilares e Botão */
+      .content-section {
+        grid-column: 2;
+        grid-row: 1;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .avatar-wrap {
+        width: 164px;
+        height: 164px;
+        padding: 4px;
+        margin: 0 auto 4px;
+      }
+
+      .verified-badge {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+        bottom: 4px;
+        right: 4px;
+      }
+
+      .profile-meta {
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+      }
+
+      .profile-name {
+        font-size: 26px;
+      }
+
+      .profile-crn {
+        font-size: 14px;
+      }
+
+      .profile-creds {
+        font-size: 13.5px;
+        line-height: 1.45;
+        margin-top: 4px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 67, 117, 0.15);
+      }
+
+      /* Coluna Direita: Copy, Pilares e Botão */
+      .content-section {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .meds-pills {
+        justify-content: flex-start;
+        margin-bottom: 14px;
+      }
+
+      .headline {
+        font-size: 32px;
+        text-align: left;
+        margin-bottom: 12px;
+        line-height: 1.14;
+      }
+
+      .subheadline {
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 18px;
+        line-height: 1.45;
+      }
+
+      .pillars-list {
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+
+      .pillar-item {
+        padding: 12px 16px;
+      }
+
+      .pillar-item:hover {
+        transform: translateX(4px);
+      }
+
+      .pillar-text {
+        font-size: 14.5px;
+      }
+
+      .cta-button {
+        min-height: 68px;
+        padding: 18px 28px;
+      }
+
+      .cta-main {
+        font-size: 19px;
+      }
+    }
+
+    /* Ajuste fino para telas muito pequenas (ex: iPhone SE) */
+    @media (max-width: 375px) {
+      .bio-card {
+        padding: 16px 14px;
+      }
+      .avatar-wrap {
+        width: 64px;
+        height: 64px;
+      }
+      .headline {
+        font-size: 20px;
+      }
+      .cta-main {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Glows Decorativos -->
+  <div class="ambient-glow glow-pink" aria-hidden="true"></div>
+  <div class="ambient-glow glow-orange" aria-hidden="true"></div>
+
+
+  <!-- Dobra Única -->
+  <main class="single-fold-stage">
+    <section class="bio-card" aria-label="Apresentação e Contato WhatsApp">
+
+      <!-- Bloco de Proposta de Valor + CTA -->
+      <div class="content-section">
+        <div class="meds-pills" aria-label="Medicações acompanhadas">
+          <span class="med-pill"><span>✦</span> Ozempic</span>
+          <span class="med-pill"><span>✦</span> Mounjaro</span>
+          <span class="med-pill"><span>✦</span> Wegovy &amp; Saxenda</span>
+        </div>
+
+        <h1 class="headline">
+          Potencialize o resultado da canetinha <span class="txt-highlight">sem perder massa muscular</span> e sem efeito rebote.
+        </h1>
+
+        <p class="subheadline">
+          Tenha um plano alimentar <strong>100% individualizado</strong> para a sua rotina, fase e dosagem da medicação — com suporte direto no WhatsApp.
+        </p>
+
+        <ul class="pillars-list">
+          <li class="pillar-item">
+            <div class="pillar-icon" aria-hidden="true">💪</div>
+            <div class="pillar-text">
+              <strong>Proteção Muscular e Zero Flacidez:</strong> Estratégia hiperproteica adaptada mesmo para dias de pouca fome.
+            </div>
+          </li>
+          <li class="pillar-item">
+            <div class="pillar-icon" aria-hidden="true">🌿</div>
+            <div class="pillar-text">
+              <strong>Controle de Sintomas:</strong> Ajustes alimentares práticos para aliviar enjoo, refluxo e constipação.
+            </div>
+          </li>
+          <li class="pillar-item">
+            <div class="pillar-icon" aria-hidden="true">🎯</div>
+            <div class="pillar-text">
+              <strong>Desmame Seguro:</strong> Consolidação de hábitos para manter o peso conquistado sem efeito sanfona.
+            </div>
+          </li>
+        </ul>
+
+        <a
+          href="https://wa.me/5511947421814?text=Ol%C3%A1%20Larissa%2C%20gostaria%20de%20saber%20como%20funciona%20seu%20acompanhamento%20individual%20para%20GLP-1%2C%20pode%20me%20ajudar%3F"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta-button"
+          id="whatsapp-cta"
+          onclick="if(window.fbq){fbq('track','Contact');}"
+        >
+          <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12.004 2C6.48 2 2.001 6.479 2.001 12c0 1.884.523 3.649 1.433 5.16L2 22l4.981-1.307A9.948 9.948 0 0012.004 22c5.523 0 10.002-4.477 10.002-10 0-5.521-4.479-10-10.002-10zm5.922 14.179c-.212.593-1.228 1.136-1.721 1.21-.441.065-.998.093-1.611-.102-.372-.118-.848-.276-1.458-.54-2.563-1.106-4.235-3.686-4.363-3.856-.128-.17-1.042-1.384-1.042-2.64s.658-1.873.892-2.128c.234-.255.511-.319.681-.319l.493.008c.135.008.364-.062.572.44.213.511.727 1.772.785 1.9.058.128.096.263.019.417-.469.93-.971.9-.72 1.33 1.08 1.854 2.158 2.463 3.782 3.275.255.127.404.106.552-.064.148-.17.637-.743.806-.998.169-.256.339-.214.572-.128.233.085 1.487.7 1.742.828.255.128.425.192.489.298.064.106.064.617-.149 1.213z"/>
+          </svg>
+          <span class="cta-main">CHAMAR NO WHATSAPP</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Bloco da Nutricionista (Abaixo do botão no mobile) -->
+      <div class="profile-section">
+        <div class="avatar-wrap">
+          <img
+            src="larissa.png"
+            alt="Nutricionista Larissa Giongo — Especialista em GLP-1"
+            class="avatar-img"
+            width="164"
+            height="164"
+          >
+          <div class="verified-badge" title="Nutricionista Verificada CRN-3 74733" aria-hidden="true">✓</div>
+        </div>
+
+        <div class="profile-meta">
+          <h2 class="profile-name">Larissa Giongo</h2>
+          <div class="profile-crn">Nutricionista · CRN-3 74733</div>
+          <p class="profile-creds">
+            Formada pela São Camilo e Especialista em Nutrição Clínica e Hospitalar pela <strong>UNIFESP</strong>.
+          </p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
